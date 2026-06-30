@@ -18,7 +18,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# ── 数据预处理（复用你的逻辑） ────────────────────────────
+# ── 数据预处理（复用逻辑） ────────────────────────────
 @st.cache_data
 def load_and_prepare(data_path: str) -> pd.DataFrame:
     df = pd.read_csv(data_path)
@@ -45,7 +45,7 @@ def load_and_prepare(data_path: str) -> pd.DataFrame:
 # ── 加载数据 ──────────────────────────────────────────────
 data_path = st.sidebar.selectbox(
     "选择数据文件",
-    ["./download/output/cleaned_recruitment_data.csv"],
+    ["download/output/cleaned_recruitment_data.csv"],
     index=0,
 )
 
